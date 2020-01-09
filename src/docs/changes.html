@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Content Stylesheet for Site -->
+
+    
+<!-- start the processing -->
+    <html>
+    <head>
+      <style type="text/css">
+        @import url("./css/tigris.css");
+        @import url("./css/site.css");
+      </style>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+
+            
+      <title>LogKit - $root.getChild("properties").getChild("title").getText()</title>
+    </head>
+
+    <body marginwidth="0" marginheight="0" class="composite">
+
+      <div id="banner">
+        <table border="0" cellspacing="0" cellpadding="8" width="100%">
+          <!-- TOP IMAGE -->
+          <tr>
+            <td>      <td align="left">
+    <a href="http://jakarta.apache.org"><img src="http://jakarta.apache.org/images/jakarta-logo.gif" border="0"/></a>
+    </td>
+    <td align="right">
+              <a href="http://avalon.apache.org/logkit"><img src="./images/header.gif" alt="LogKit" border="0"/></a>
+        </td>
+  </td>
+            <td><div align="right" valign="bottom"><b><font size="+3">LogKit</font></b></div></td>
+          </tr>
+        </table>
+      </div>
+
+      <table border="0" cellspacing="0" cellpadding="8" width="100%" id="main">
+        <tr valign="top">
+          <!-- LEFT SIDE NAVIGATION -->
+          <td id="leftcol" width="20%">
+            <div id="navcolumn">
+                  <div>
+      <strong>About</strong>
+              <div><small>      <a href="./index.html">Overview</a>
+  </small></div>
+              <div><small>      <a href="./features.html">Features</a>
+  </small></div>
+              <div><small>      <a href="http://jakarta.apache.org/builds/avalon/release/logkit/latest">Download</a>
+  </small></div>
+              <div><small>      <a href="./whitepaper.html">Whitepaper</a>
+  </small></div>
+              <div><small>      <a href="./changes.html">Changes</a>
+  </small></div>
+              <div><small>      <a href="./api/index.html">API Docs</a>
+  </small></div>
+          </div>
+              </div>
+          </td>
+          <td><div id="bodycol"><div class="app">
+
+  <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#525D76">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>ChangeLog</strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+                      <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.2 (?)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+      Add LoggerListener support.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Add support for any arbitrary logger wrapper class.
+     (SC)</p>
+</li>
+                <li>  <p>
+      Add support for the LF5 GUI logging target.
+     (SW)</p>
+</li>
+                <li>  <p>
+      Remove the circular dependency on Avalon Framework.
+     (BL)</p>
+</li>
+                <li>  <p>
+      Ensure all source files contain the blessed version of the license.
+     (BL)</p>
+</li>
+                <li>  <p>
+      Makes sure target arrays contain no nulls and a few other cleanups.
+     (PD)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.1 (September 1, 2002)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+      Added SMTPOutputLogTarget to enable logging to email addresses.
+     (MC)</p>
+</li>
+                <li>  <p>
+      Several bug fixes. Submitted By: David Gray
+     (EP)</p>
+</li>
+                <li>  <p>
+      Changed the default log format so that the log entry times are formatted
+      using a human friendly format.
+     (LM)</p>
+</li>
+                <li>  <p>
+      Rotate before write.
+     (EP)</p>
+</li>
+                <li>  <p>
+      Added RotateStrategyByDate to enable daily, weekly, and monthly
+      rotation of log files. Submitted By: Bernhard Huber
+     (EP)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0.1 (January 31, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+      Fixed spelling in the documentation files.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Fix javadoc warnings from "@returns" tags used instead of "@return".
+     (PD)</p>
+</li>
+                <li>  <p>
+      added new constructors to produce better readable file names in the
+      File Strategy classes.
+     (GP)</p>
+</li>
+                <li>  <p>
+      Added fixes to AsyncLogTarget: Make sure that the LogTarget delegated
+      to cannot disrupt thread by throwing an exception.  Remove uneeded step
+      from documentation.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Many improvements to PatternFormatter including:  Made it possible to
+      specify the format of date in the auxilliary parameter of the format
+      for dates.  Cached the date and DateFormatter objects so that they are
+      not created every time a LogEvent is formatted.  Added a getRTime()
+      method to format relative time. Just delegates to getTime at the
+      moment for backwards compatability.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Made sure that additivity is transitive (in Logger) - even when you
+      only inherit your loggers from your parent.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Added isPriorityEnabled() method to Logger to determine if specified
+      priority is enabled.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Various build improvements.
+     (LM)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0 (October 26, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+      Remove references to Testlet (since we migrated to JUnit).
+     (BL)</p>
+</li>
+                <li>  <p>
+      Fixed EOL issues in test so that line formatting works across all
+      systems (rather than just unix).
+     (PD)</p>
+</li>
+                <li>  <p>
+      Added in a clearer javadoc class description in PatternFormatter.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Made Hierarchy setDefaultLogTargets() which is like
+      setDefaultLogTarget() but accepts an array.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Use default log format when use default constructor in
+      AvalonFormatter comaptibility.
+     (EP)</p>
+</li>
+                <li>  <p>
+      Various build improvements.
+     (BL)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0b5 (September 17, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+      Updated unit tests to use JUnit rather than Testlet.
+     (EP)</p>
+</li>
+                <li>  <p>
+      Deprecate OutputStreamLogger and replace with LoggerOutputStream.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Added JMS support for JMS Log messages.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Added file rotation strategies, including patches from
+      Bernhard Huber and Carsten Ziegeler
+     (PD)</p>
+</li>
+                <li>  <p>
+      Implemented a database log target.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Used synchronization to make targets more threads safe.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Fix masquerading attack security hole.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Incorporate additivity feature similar to Log4j.  This is needed as
+      getLogTargets() is deprecated for security reasons (allowed masq)
+      and yet this functionality is still needed.  Added unit tests to
+      verify it behaves as expected.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Made LogEvent serializable. The format may change slightly before
+      release.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Passed Hierarchy object as ErrorHandler. Hierarchy delegates to another
+      ErrorHandler which allows ErrorHandler to be pluggable without resetting
+      all ErrorHandlers each time an ErrorHandler is changed.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Incorporated delegation of Error Handling to ErrorHandler.
+      Logging components receive an ErrorHandler by implementing ErrorAware.
+      Added AbstractTarget that provided basic functionality of open/close
+      and error handling almost always needed by LogTargets.
+      Refactored all existing targets to work with this method.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Made ContextMap serializable. After deserializing it defaults to readonly.
+      This assumes that Context only contains serializable elements.
+     (PD)</p>
+</li>
+                <li>  <p>
+      Update build process to the proposed standard.
+     (BL)</p>
+</li>
+                <li>  <p>
+      Update build process to notify the user of missing jars, and perform
+      many other checks
+     (PD)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0b4 (August 6, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+    Added ContextMap, updated whitepaper to describe the feature. Deprecated ContextStack
+    in the process as it encouraged bad practices and has been supersceded by ContextMap.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added ExtendedPatternFormatter to allow log messages to be formatted with
+    caller method and thread ids.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Fixed bug in OutputStreamLogger so that it does not append a '\n' at end
+    of stream.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added Target SafeFileTarget that opens file and then closes file each time
+    a log entry is written.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added basic unit tests for the logkit formatters, stream and file output
+    targets, priority and logTarget inheritance and utility code.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Rework existing logtargets so that they are thread safe, perform better error
+    management and improve usability. Old style targets have been deprecated as
+    have any "unsafe" methods.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added extra constructor to PatternFormatter so that format string is
+    specified at construction time. Deprecated no arguements constructor
+    and setFormat() method.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added StackIntrospector class that is amalgamation of utility code supplied by
+    Stuart Roebuck (stuart.roebuck@adolos.co.uk) and  Sylvain
+    Wallez (sylvain.wallez@anyware-tech.com).
+   (PD)</p>
+</li>
+                <li>  <p>
+    Right justified fields are cropped on the left. ie [%-20.20{context}] changes from
+    outputting "[org.apache.log.forma]" to "[mat.PatternFormatter]".
+   (SR)</p>
+</li>
+                <li>  <p>
+    Made Hierarchy.log() deal gracefully with a null exception parameter.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added stylesheet to convert Stylebook markup to DocBook markup.
+   (BL)</p>
+</li>
+                <li>  <p>
+    Deprecated AvalonFormatter and created a new Formatter inside Avalon project.
+   (BL)</p>
+</li>
+                <li>  <p>
+    Changed the documentation build process to use Cocoon to build
+    the site.
+   (BL)</p>
+</li>
+                <li>  <p>
+    Deprecated FilterTarget it was rarely (never?) used and offers only minor
+    advantages over directly using sub-classes.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Added XMLFormatter to enable writing logs in XML format.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Made priority serializable.
+   (PD)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0b3 (July 22, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+    Added setPriority() method to Priority filter to allow modification of
+    filter properties at runtime.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Deprecated Logger.getCategory as it violates the Inversion Of Control principle.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Enhanced FileOutputLogTarget to enable it to be used to append to a file, rather than overwrite.
+   (PD)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0b2 (June 4, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>
+    Beta 2 release.
+   (BL)</p>
+</li>
+                <li>  <p>
+    Update documentation so that you can get started easily.
+   (PD)</p>
+</li>
+                <li>  <p>
+    Fixed logical error in PriorityFilter.  The code _used_ to allow
+    anything up to a priority level (i.e. if priority was set to
+    ERROR, then it would allow DEBUG, INFO, and WARN).  Now it
+    operates correctly (i.e. if priority was set to ERROR, then
+    it will allow ERROR and FATAL_ERROR).
+   (BL)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr><td bgcolor="#828DA6">
+      <font color="#ffffff" face="arial,helvetica,sanserif">
+        <strong>
+          Revision 1.0b1 (May 11, 2001)
+        </strong>
+      </font>
+    </td></tr>
+    <tr><td>
+      <blockquote>
+        <ul>
+                <li>  <p>First public release. (PD)</p>
+</li>
+                <li>  <p>
+  Renamed LogEntry to LogEvent. This was done as Entry was a misnomer.
+  It was a misnomer as each Entry could in fact never be placed in
+  logs or placed in multiple logs. It is up to the LogTargets how to
+  treat the event and whether or not to convert the event into an entry.
+  Updated all interfaces that referred to entry to refer to event.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Added getCurrentContextStack() to ContextStack class and made the
+  method with same name in LogKit delegate to ContextStack.getCurrentContextStack()
+   (PD)</p>
+</li>
+                <li>  <p>
+  Added getDefaultLogEngine() to LogEngine and made the method with same name
+  in LogKit delegate to LogEngine.getDefaultLogEngine()
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made Priority a class in place of Priority.Enum class. Converted constants
+  to use this interface. Added getPriorityForName() method and made LogKit
+  method of same name delegate to it.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made ContextStack contain objects other than strings.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made each hierarchy extend from a root Logger about category "". Also put
+  default log target into this Logger. Thus no longer *need* getDefaultLogTarget
+  method in LogEngine/LogKit - thus it was removed.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made each logger cache a version of logTargets. Combine this with the root logger
+  containing default log target means that you no longer have to recursively
+  check parents to get LogTargets or check the engine. This is considerably
+  faster.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made "category" behave identically to logTarget inheritance wise.
+  Each logger caches priority when it is inherited from parents. This is
+  slightly faster than old version.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Merged "Category" object into Logger. This required adding getPriority to
+  Logger and making Logger.getCategory() return name of category rather than
+  Category object.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Protected logger manipulation by synchronized sections
+   (PD)</p>
+</li>
+                <li>  <p>
+  Made ServletOutputTarget not filter - leave that to a separate FilterTarget
+   (PD)</p>
+</li>
+                <li>  <p>
+  Moved instance variables to private instead of protected were appopriate.
+  This allows to decrease maintanence cost just in case someone inherits
+  from one of our classes.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Removed the hashtable that stored log targets as it can be easily done
+  by users of LogKit and wasn't serving any real purpose.
+   (PD)</p>
+</li>
+                <li>  <p>
+  Renamed LogEngine to Hierarchy to match Log4j and allow easy cross migration
+   (PD)</p>
+</li>
+                </ul>
+      </blockquote>
+    </td></tr>
+  </table>
+  </a>
+            </blockquote>
+    </td></tr>
+  </table>
+            </div>
+		<div align="right" id="authors">
+			</div>
+          </div></td>
+        </tr>
+      </table>
+
+      <!-- FOOTER -->
+      <div id="footer">
+        <table border="0" cellspacing="0" cellpadding="4">
+          <tr>
+            <td>Copyright &#169; 1999-2003, Apache Software Foundation</td>
+          </tr>
+        </table>
+      </div>
+
+    </body>
+  </html>
+
+<!-- end the processing -->
+
+
+
