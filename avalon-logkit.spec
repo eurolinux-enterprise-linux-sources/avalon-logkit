@@ -33,7 +33,7 @@
 
 Name:        avalon-%{short_name}
 Version:     2.1
-Release:     13%{?dist}
+Release:     14%{?dist}
 Epoch:       0
 Summary:     Java logging toolkit
 License:     ASL 2.0
@@ -118,6 +118,9 @@ cp -pr dist/docs/api/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 %{_javadocdir}/%{name}
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 02.1-14
+- Mass rebuild 2013-12-27
+
 * Fri Jun 28 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 0:2.1-13
 - Rebuild to regenerate API documentation
 - Resolves: CVE-2013-1571
